@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lulu Lanches - Delivery Patos de Minas</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--rosa:#ff3b9a;--amarelo:#ffe600;--roxo:#6c00ff;--bg:#fff7fb}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:#2b2b2b}
+h1,h2{font-family:'Fredoka',sans-serif}
+.topo{background:var(--rosa);color:white;text-align:center;padding:10px;font-weight:700;font-size:14px}
+.hero{background:var(--roxo);color:white;padding:30px 20px;text-align:center;border-radius:0 0 40px 40px}
+.hero h1{font-size:42px;line-height:0.9}
+.hero h1 span{color:var(--amarelo)}
+.hero p{margin-top:10px;opacity:0.9}
+.promo-card{background:var(--amarelo);margin:-30px 20px 20px;border:3px solid #000;border-radius:20px;padding:18px;display:flex;align-items:center;gap:15px;box-shadow:8px 8px 0 #000}
+.promo-card .icon{font-size:40px}
+.promo-card b{font-size:18px}
+.menu{padding:20px}
+.card{background:white;border:2px solid #000;border-radius:18px;padding:16px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;box-shadow:6px 6px 0 #000}
+.card h3{font-family:'Fredoka';font-size:18px}
+.preco{background:var(--rosa);color:white;padding:6px 12px;border-radius:20px;font-weight:700}
+.btn{position:fixed;bottom:20px;left:20px;right:20px;background:#25D366;color:white;text-align:center;padding:18px;border-radius:50px;font-weight:700;text-decoration:none;font-size:18px;box-shadow:0 10px 20px rgba(0,0,0,0.2);border:3px solid #000}
+.lista{padding:0 20px 100px}
+.lista input{width:100%;padding:14px;border:2px solid #000;border-radius:12px;margin-top:10px}
+.lista button{width:100%;margin-top:10px;padding:14px;background:var(--roxo);color:white;border:2px solid #000;border-radius:12px;font-weight:700;box-shadow:4px 4px 0 #000}
+</style>
+</head>
+<body>
+<div class="topo">🎉 PROMOÇÃO SEXTA: GUARANÁ 200ML GRÁTIS NO 1º PEDIDO!</div>
+<div class="hero">
+<h1>LULU <span>LANCHES</span></h1>
+<p>Patos de Minas • Delivery rápido • 18h às 23h</p>
+</div>
+<div class="promo-card">
+<div class="icon">🥤</div>
+<div><b>1º pedido = Guaraná GRÁTIS</b><br>Só essa sexta! Peça pelo Zap</div>
+</div>
+<div class="menu">
+<div class="card"><div><h3>X-Tudo Lulu</h3><small>Pão, 2 carnes, queijo, bacon, ovo</small></div><div class="preco">R$28</div></div>
+<div class="card"><div><h3>X-Bacon Especial</h3><small>Muito bacon + cheddar</small></div><div class="preco">R$24</div></div>
+<div class="card"><div><h3>Batata G + Refri 1L</h3><small>Combo família</small></div><div class="preco">R$35</div></div>
+</div>
+<div class="lista">
+<h2>Entra na lista VIP da Lulu 💜</h2>
+<p>Ganha cupom de 10% no primeiro pedido</p>
+<input id="nome" placeholder="Seu nome">
+<input id="zap" placeholder="Seu WhatsApp">
+<button onclick="enviar()">QUERO MEU CUPOM</button>
+<p id="msg" style="margin-top:10px;font-weight:600"></p>
+</div>
+<a class="btn" href="https://wa.me/5534999999999?text=Ola%20Lulu!%20Vi%20a%20promo%20do%20Guarana%20gratis%20e%20quero%20pedir" target="_blank">PEDIR NO WHATSAPP 🟢</a>
+<script>
+function enviar(){
+let n=document.getElementById('nome').value;
+let z=document.getElementById('zap').value;
+if(!n||!z){document.getElementById('msg').innerText='Preencha nome e zap :)';return}
+document.getElementById('msg').innerText='Aê '+n+'! Te mandei o cupom no Zap! 💜';
+setTimeout(()=>{window.open('https://wa.me/5534999999999?text=Oi%20Lulu!%20Meu%20nome%20é%20'+encodeURIComponent(n)+'%20quero%20meu%20cupom%20de%2010%25','_blank')},800)
+}
+</script>
+</body>
+</html>
